@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block body %}
+{% for board in boards %}
+<a href="{% url 'board:detail' board.id %}">
+  {{board.title}}</a>
+{{board.content}}
+{% endfor %}
+{% endblock %}

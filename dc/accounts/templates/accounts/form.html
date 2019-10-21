@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<form action="{% url 'board:create' %}" method='post'>
+  {% comment %}
+  "{% url '앱이름:path설정이름' 변수이름1, 변수이름2, ...%}"
+
+  {% endcomment %}
+  {% csrf_token %}
+  {{form.as_p}}
+  <input type="submit" value="제출">
+</form>
+
+
+{% endblock %}
